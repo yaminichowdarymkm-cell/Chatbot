@@ -1,0 +1,4 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin Login | RISE AI</title><link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"></head>
+<body class="login-page"><div class="login-card"><img class="login-logo" src="{{ url_for('static', filename='images/college-logo.jpg') }}"><h1>Admin Login</h1><p>Manage the college FAQ knowledge base.</p>
+{% with messages = get_flashed_messages() %}{% for message in messages %}<div class="alert">{{ message }}</div>{% endfor %}{% endwith %}
+<form method="post"><label>Email</label><input name="email" type="email" required placeholder="admin@rise.local"><label>Password</label><input name="password" type="password" required placeholder="Password"><button class="primary-btn" type="submit">Sign in</button></form><a class="back-link" href="/">← Back to chatbot</a></div></body></html>
